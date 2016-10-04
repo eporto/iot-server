@@ -159,11 +159,8 @@ app.get('/res/:class/deck', function(req,res) {
 /**
  *    Server Setup Variables
  */
-var ip    = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
-var port  = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var port  = process.env.PORT || 5000;
 
-if (process.env.OPENSHIFT_NODEJS_IP === undefined)
-    console.warn('No OPENSHIFT_NODEJS_IP var, using %s',ip);
 
 
 /**
@@ -187,7 +184,7 @@ exit_code.forEach(function(element, index, array) {
 /**
  *    Server Initialization
  */
-app.listen(port, ip, function() {
+app.listen(port, function() {
     var d = new Date().toString();
-    console.log('[%s]:Node server started on %s:%d', d.substring(0,d.indexOf('GMT')-1), ip,port);
+    console.log('[%s]:Node server started on port:%d', d.substring(0,d.indexOf('GMT')-1), port);
   });
