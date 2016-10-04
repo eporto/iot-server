@@ -1,0 +1,21 @@
+{
+  "name": "iot-server",
+  "version": "1.0.0",
+  "description": "A Server Project for University IoT Class",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Eduardo Porto",
+    "email": "eduardomaporto@gmail.com",
+    "url": "https://github.com/eporto"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.2"
+  }
+}
