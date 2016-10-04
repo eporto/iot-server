@@ -56,7 +56,7 @@ module.exports.comparePassword = function(candidatePassword, hash, callback){
 
 module.exports.createToken = function(username,callback) {
     var query = { name: username };
-    var token = Utils.generateToken();
+    var token = Utils.generateToken(25);
     User.findOneAndUpdate(query, { token: token }, callback);
 }
 

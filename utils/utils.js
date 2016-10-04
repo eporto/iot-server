@@ -1,5 +1,5 @@
 
-module.exports.generateToken = function (len = 25) {
+module.exports.generateToken = function (len) {
     var characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var charactersLength = characters.length;
     var randomString = '';

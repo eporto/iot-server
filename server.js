@@ -65,7 +65,7 @@ app.post('/app/login', function(req,res) {
             res.json({
               "status": 200,
               "message": 'login_complete',
-              "token": Utils.generateToken()
+              "token": Utils.generateToken(25)
             });
           });
          
