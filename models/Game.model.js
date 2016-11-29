@@ -35,12 +35,23 @@ module.exports.removeUserFromGame = function(gameid,userid) {
         if(err) 
             console.log("Error Game findById: "+err);
         else {
-            var len = game.players;
+            let isOver = true;
+            var len = game.players.length;
             for (let i = 0; i < len;i++) {
                 if(game.players[i].id === userid) {
                     game.players[i].gameTime = new Date();
                     break;
                 }
+            }
+
+            for(let i = 0; i < len; i++) {
+                if(!game.players[i].gameTime) {
+                    isOver = false;
+                     break;
+                }          
+            }
+            if(isOver) {
+                game.status = "GAME_DROP";
             }
             game.save(function(err,game){
                 if (err) console.log("Erro RemoveUserFromGame (save): "+err)

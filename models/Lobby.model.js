@@ -37,6 +37,9 @@ module.exports.removeUserFromLobby = function(lobbyid,userid) {
                 } 
             }
         
+            if (!lobbySession.player.length) {
+                lobbySession.status = "LOBBY_DROP";
+            }
             lobbySession.save(function(err,lobbyUpdated){
                 if (err) console.log("Error lobby.save(): "+err);
             });
