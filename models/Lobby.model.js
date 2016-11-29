@@ -32,6 +32,7 @@ module.exports.removeUserFromLobby = function(lobbyid,userid) {
             var len = lobbySession.player.length;
             for (let i = 0; i < len;i++) {
                 if(lobbySession.player[i]==userid) {
+                    console.log("Player "+lobbySession.player[i]+" disconnected from Lobby");
                     lobbySession.player.splice(i,1);
                     break;
                 } 

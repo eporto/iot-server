@@ -98,7 +98,7 @@ module.exports.ping = function(gameSession, timeoutid) {
 
     for (let i = 0; i < len;i++) {
         if(!gameSession.players[i].ping) { 
-            console.log("Player "+gameSession.players[i].id+" disconnected");
+            //console.log("Player "+gameSession.players[i].id+" disconnected");
             if(gameSession.type==="lobby")
                 lobbyConfig.removeUserFromLobby(gameSession.id,gameSession.players[i].id);
             else 

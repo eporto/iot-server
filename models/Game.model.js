@@ -38,8 +38,9 @@ module.exports.removeUserFromGame = function(gameid,userid) {
             let isOver = true;
             var len = game.players.length;
             for (let i = 0; i < len;i++) {
-                if(game.players[i].id === userid) {
+                if(game.players[i].id == userid) {
                     game.players[i].gameTime = new Date();
+                    console.log("Player "+game.players[i].id+" disconnected from Game");
                     break;
                 }
             }
