@@ -1,4 +1,4 @@
 module.exports = {
-    db: '<MONGODB_REMOTE_URL>'
+    db: 'mongodb://rootadmin:admin123@ds044989.mlab.com:44989/iotproject'
     
 }

@@ -5,7 +5,8 @@ var Utils = require('../utils/utils.js');
 var UserSchema = mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     password: {
         type: String,
@@ -23,7 +24,7 @@ var UserSchema = mongoose.Schema({
     token: String
  });
 
-var User = module.exports = mongoose.model('User',UserSchema);
+var User = module.exports = mongoose.model('users',UserSchema);
 
 
 
