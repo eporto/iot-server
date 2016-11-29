@@ -43,7 +43,7 @@ module.exports.removeUserFromGame = function(gameid,userid) {
                 }
             }
             game.save(function(err,game){
-                if (err) throw err;
+                if (err) console.log("Erro RemoveUserFromGame (save): "+err)
             });
         }
     });

@@ -102,7 +102,7 @@ module.exports.ping = function(gameSession, timeoutid) {
             if(gameSession.type==="lobby")
                 lobbyConfig.removeUserFromLobby(gameSession.id,gameSession.players[i].id);
             else 
-                gameConfig.removeUserFromGame(gameSession.id,gameSession.players[i].id);
+                gameConfig.removeUserFromGame(gameSession.gameid,gameSession.players[i].id);
 
             removed.push(i);
         } else {
