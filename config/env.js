@@ -1,4 +1,4 @@
 module.exports = {
-    db: '<CONNECT_URL>'
+    db: 'CONNECTION_URL'
     
 }
